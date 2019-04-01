@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { SocialLoginModule } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider  } from 'angularx-social-login';
+import { OauthInitComponent } from './oauth-init/oauth-init.component';
+import { LoginComponent } from './login/login.component';
 
 
 const config = new AuthServiceConfig([
@@ -35,7 +37,9 @@ export function provideConfig() {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OauthInitComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
